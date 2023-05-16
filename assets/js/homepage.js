@@ -1,23 +1,23 @@
 const param = 'queen';
 
+search(param);
+
 async function search(param){
 
     const url = `https://striveschool-api.herokuapp.com/api/deezer/search?q=${param}`
 
     try{
 
-        const response = await fecth (url);
+        const response = await fetch(url);
 
         if(response.ok) {
 
-            const elementsArray = await (response.json()).value;
+            const elementsArray = (await response.json()).data;
 
-            onsole.log(elementsArray);
+            console.log(elementsArray);
 
         }
 
     }catch(err){console.log(err)}
 
 }
-
-search()
