@@ -1,4 +1,24 @@
 a{
     text-decoration: none;
     color: white;
+    margin-bottom: 2px;
+    width: 100%;
+}
+
+a:hover{
+    background-color: lightgrey;
+}
+
+i{
+    font-size: 1.2em;
+    padding: 2px;
+}
+
+#playlistColumn{
+    height: 300px;
+    overflow: auto;
+    font-size: 0.8em;
+        a{
+            color: grey;
+        }
 }
