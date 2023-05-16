@@ -62,8 +62,10 @@ function loadFriends(){
 
 
 
-const param = 'red hot chili peppers';
 
+// ---------- FETCHES ----------
+
+// search fetch
 const search = async (param) => {
 
     const url = `https://striveschool-api.herokuapp.com/api/deezer/search?q=${param}`
