@@ -6,7 +6,7 @@ a {
 }
 
 a:hover {
-  background-color: lightgrey;
+  background-color: grey;
 }
 
 i {
@@ -15,12 +15,10 @@ i {
 }
 
 #playlistColumn {
-  height: 300px;
-  overflow: auto;
   font-size: 0.8em;
 }
 #playlistColumn a {
-  color: grey;
+  color: rgb(168, 168, 168);
 }
 
 html, body {
