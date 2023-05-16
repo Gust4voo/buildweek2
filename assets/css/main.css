@@ -15,10 +15,14 @@ i {
 }
 
 #playlistColumn {
-  font-size: 0.8em;
+  font-size: 0.9em;
+  height: 900px;
 }
 #playlistColumn a {
   color: rgb(168, 168, 168);
+}
+#playlistColumn a:active {
+  background-color: rgb(26, 26, 26);
 }
 
 #dropdownMenu {
@@ -37,4 +41,8 @@ html, body {
   box-sizing: border-box;
   background-color: black;
   color: white;
+}
+
+body {
+  height: 100vh;
 }/*# sourceMappingURL=main.css.map */

@@ -61,11 +61,7 @@ function loadFriends(){
 
 // ---------- LOAD NAVBAR ----------
 
-
-
-// ---------- FETCHES ----------
-
-// playlist array
+// playlist array 
 const playlistNames = [
     "Be The Young Seasons 1-5",
     "Be The Young Seasons 6-8",
@@ -101,6 +97,32 @@ const playlistNames = [
     "ma(ncanza) che cazzo ne so io (gen-feb 2021)",
 ];
 
+// populate playlist column
+function populatePlaylistColumn(){
+
+    const playlistColumn = document.getElementById('playlistColumn');
+
+    playlistNames.forEach(playlistName => {
+
+        const element = document.createElement('a');
+
+        element.setAttribute('href', 'javascript:void(0)');
+
+        element.classList.add('text-truncate')
+
+        element.innerHTML = playlistName;
+
+        playlistColumn.appendChild(element);
+
+    })
+
+}
+
+// ---------- FETCHES ----------
+
+
+
+
 // search fetch
 const search = async (param) => {
 
@@ -129,5 +151,7 @@ const search = async (param) => {
 window.onload = () => {
 
     loadFriends();
+
+    populatePlaylistColumn();
 
 }
