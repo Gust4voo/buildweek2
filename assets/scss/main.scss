@@ -1,4 +1,4 @@
-@import 'palette', 'navbar';
+@import 'palette', 'navbar', 'friendBox';
 
 html, body{
     margin: 0;
@@ -6,8 +6,4 @@ html, body{
     box-sizing: border-box;
     background-color: black;
     color: white;
-}
-
-body{
-    height: 100vh;
 }

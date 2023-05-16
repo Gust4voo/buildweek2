@@ -95,6 +95,28 @@ const playlistNames = [
     "quanto trash cazzo",
     "The 2020 Playlist",
     "ma(ncanza) che cazzo ne so io (gen-feb 2021)",
+    "VEE, CARLOTTA E GIACOMO VANNO A BOSIO",
+    "An Emily Winchester kind of mood 🔪🖕",
+    "landing page (mar-apr 2022)",
+    "2021 lol",
+    "cosa cazzo vuol dire questa affermazione (gen-feb 2022)",
+    "honey and glass (nov-dic 2021)",
+    "(Revenge) Training Arc 🦍",
+    "Lidia 🤝 Emily",
+    "minecraft e nintendo switch (sep-oct 2021)",
+    "silvano d'orba? I hardly know her (lug - ago 2021)",
+    "Culo 2021",
+    "Frah Quintale Mix",
+    "Francesco Guccini Mix",
+    "Lo Stato Sociale Mix",
+    "chapter 4/? (mag-giu 2021)",
+    "Strive School <> The Hunt Motivation",
+    "mi stavo dimenticando (mar-apr 2021)",
+    "high school musical 1,2,3",
+    "quanto trash cazzo",
+    "The 2020 Playlist",
+    "ma(ncanza) che cazzo ne so io (gen-feb 2021)",
+    
 ];
 
 // populate playlist column
@@ -107,8 +129,6 @@ function populatePlaylistColumn(){
         const element = document.createElement('a');
 
         element.setAttribute('href', 'javascript:void(0)');
-
-        element.classList.add('text-truncate')
 
         element.innerHTML = playlistName;
 

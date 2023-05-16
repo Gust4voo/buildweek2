@@ -16,7 +16,7 @@ i {
 
 #playlistColumn {
   font-size: 0.9em;
-  height: 900px;
+  height: 72.9vh;
 }
 #playlistColumn a {
   color: rgb(168, 168, 168);
@@ -35,14 +35,14 @@ i {
   background-color: grey;
 }
 
+#options a:hover {
+  background-color: grey;
+}
+
 html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: black;
   color: white;
-}
-
-body {
-  height: 100vh;
 }/*# sourceMappingURL=main.css.map */
