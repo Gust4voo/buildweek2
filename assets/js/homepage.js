@@ -81,3 +81,84 @@ const suggeriti = [
         description: 'Allenati al massimo' 
     },
 ]
+
+
+// ---------- ALBUM COPERTINA ----------
+async function loadSuggestedAlbum(obj){
+
+    const songContainer = document.getElementById('songContainer');
+
+    const resultArray = await album(obj);
+
+    const result = resultArray[Math.floor(Math.random()*25)];
+
+    console.log(result)
+
+    const div = document.createElement('div');
+
+    div.classList.add('bg-dark', 'my-2', 'rounded', 'jumbotronContainer');
+
+    div.innerHTML = `<div class="mx-2 my-1 py-3 px-3 d-flex">
+    <div id="imgJumbotron">
+        <img src="${result.album.cover_big}" alt="Album cover">
+    </div>
+    <div class="container-fluid">
+
+        <div class="d-flex justify-content-between">
+
+            <div class="d-flex align-items-start">
+                <p>ALBUM</p>
+            </div>
+
+            <div>
+                <p class="btn btn-sm bg-dark text-secondary rounded-pill">NASCONDI ANNUNCI</p>
+            </div>
+
+        </div>
+        
+        <div>
+            <h2>VIOLA (feat. Salmo)</h2>
+
+            <p>Fedez,&nbsp;Salmo</p>
+
+            <p>Ascolta il nuovo singolo di Fedez e salmo</p> 
+        </div>
+        <div>
+
+            <button class="btn btn-success rounded-pill px-4">Play</button>
+            <button class="btn btn-dark rounded-pill px-4 ms-2">Salva</button>
+            <a href="javascript:void(0)"><i class="bi bi-three-dots text-secondary ms-3"></i></a>
+
+        </div>
+
+    </div>
+
+</div>`;
+}
+
+// ---------- FETCHES ----------
+
+// fecth album copertina
+const album = async (query) => {
+
+    const url = `https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`;
+
+    try{
+
+        const response = await fetch(url);
+
+        if(response.ok){
+
+            const getAlbums = (await response.json()).data;
+
+            return getAlbums;
+
+        } 
+
+
+    }catch{err => console.log(err)}
+
+}
+
+// ---------- LOAD PAGINA MAIN ----------
+loadSuggestedAlbum('queen');
