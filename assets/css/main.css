@@ -21,6 +21,16 @@ i {
   color: rgb(168, 168, 168);
 }
 
+#dropdownMenu {
+  background-color: black;
+}
+#dropdownMenu a {
+  color: white;
+}
+#dropdownMenu a:hover {
+  background-color: grey;
+}
+
 html, body {
   margin: 0;
   padding: 0;

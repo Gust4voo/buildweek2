@@ -21,3 +21,14 @@ i{
             color: rgb(168, 168, 168);
         }
 }
+
+#dropdownMenu{
+    background-color: black;
+    a{
+        &:hover{
+            background-color: grey;
+        }
+        color: white; 
+    }
+    
+}
