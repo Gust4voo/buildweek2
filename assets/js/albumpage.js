@@ -143,7 +143,37 @@ async function popolaTracce(id){
 
     const tracklist = (await album(id)).tracks.data;
 
-    console.log(tracklist);
+    const imgArtist = (await artist(tracklist[0].artist['id'])).picture_big;
+
+    let durataAlbum = 0;
+
+    for(i = 0; i < tracklist.length;i++){
+        durataAlbum += tracklist[i].duration;
+    }
+
+    const albumBox = document.getElementById('albumBox');
+
+    const div = document.createElement('div');
+
+    div.classList.add('d-flex', 'align-items-end');
+
+    div.innerHTML = `<div class="me-4">
+    <img src="${tracklist[0].album.cover_big}" width="250px" alt="">
+</div>
+<div id="infoBox">
+    <p class="m-0" style="font-size: 0.9em">ALBUM</p>
+    <h1>${tracklist[0].album.title}</h1>
+    <div class="d-flex">
+        <div id="icona" class="me-2"> 
+            <img class="rounded-circle" src="${imgArtist}" width="25px" alt="">
+        </div>
+        <div>
+            <p class="m-0">${tracklist[0].artist.name}<i class="bi bi-dot"></i>2017<i class="bi bi-dot"></i>${tracklist.length} brani,<span class="text-secondary"> ${timeConverter(durataAlbum)}</span></p>
+        </div>
+    </div>
+</div>`;
+
+    albumBox.appendChild(div)
 
     let c = 0;
 
@@ -185,8 +215,12 @@ function timeConverter(sec){
 
     const secondi = sec % 60;
 
-    return minuti + ':' + secondi;
-
+    if(sec > 500){
+        return minuti + ' minuti ' + secondi + ' dadegi.';
+    }else{
+        return minuti + ':' + secondi;
+    }
+    
 }
 
 // ---------- FETCHES ----------
@@ -216,6 +250,27 @@ const search = async (param) => {
 const album = async (param) => {
 
     const url = `https://striveschool-api.herokuapp.com/api/deezer/album/${param}`
+
+    try{
+
+        const response = await fetch(url);
+
+        if(response.ok) {
+
+            const elementsArray = await response.json();
+
+            return elementsArray
+
+        }
+
+    }catch(err){console.log(err)}
+
+}
+
+// artist fetch
+const artist = async (param) => {
+
+    const url = `https://striveschool-api.herokuapp.com/api/deezer/artist/${param}`
 
     try{
 
