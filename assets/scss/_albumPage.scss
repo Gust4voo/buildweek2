@@ -1,3 +1,16 @@
+#albumContainer {
+    background: rgb(18,18,18);
+    background: linear-gradient(0deg, rgb(2, 2, 2) 22%, rgba(33,33,33,1) 100%); 
+
+    ul li a:hover {
+        background-color: grey;
+    }
+
+    ul li a{
+        color: white;
+    }
+}
+
 #listAlbum{
     background-color: transparent;
 }
@@ -14,6 +27,8 @@
         background-color: #00D052;
         &:hover{
             background-color: lighten($color: #00D052, $amount: 10);
+            font-size: 1.1em;
+            transition: 1s ease-out;
         }
         &:active{
             background-color: darken($color: #00D052, $amount: 10);
