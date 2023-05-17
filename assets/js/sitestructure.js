@@ -194,7 +194,7 @@ async function loadSuggestedAlbum(obj){
 // ---------- BUONASERA ----------
 
 // array album buonasera
-const albumsId = [119420782, 87420682, 309377597, 262561252, 315720947]
+const albumsId = [119420782, 87420682, 309377597, 262561252, 315720947, 420621057]
 
 // popola buonasera
 function populateBuonasera(){
