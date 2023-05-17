@@ -89,12 +89,15 @@ i {
   height: 40px;
   background-color: #00D052;
 }
-
-#itemsAlbums {
-  font-size: 0.8em;
+#toolsBar #play:hover {
+  background-color: #04ff67;
+}
+#toolsBar #play:active {
+  background-color: #009d3e;
 }
 
-li div p {
+#brani p {
+  margin: 0;
   color: grey;
 }
 

@@ -12,18 +12,18 @@
         width: 40px;
         height: 40px;
         background-color: #00D052;
-    }
-}
-
-#itemsAlbums{
-    font-size: 0.8em;
-}
-
-li{
-    div{
-        p{
-            color: grey;
+        &:hover{
+            background-color: lighten($color: #00D052, $amount: 10);
+        }
+        &:active{
+            background-color: darken($color: #00D052, $amount: 10);
         }
     }
 }
 
+#brani{
+    p{
+        margin: 0;
+        color: grey;
+    }
+}
