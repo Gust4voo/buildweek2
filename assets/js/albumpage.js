@@ -9,11 +9,15 @@ const albumsId = [
     },
     {
         idAlbum: '87420682',
-        color: 'white'
+        red: 226,
+        green: 214,
+        blue: 86
     },
     {
         idAlbum: '309377597',
-        color: 'white'
+        red: 179,
+        green: 179,
+        blue: 179
     },
     {
         idAlbum: '262561252',
@@ -22,16 +26,22 @@ const albumsId = [
         blue: 206
     },
     {
-        idAlbum: '315720947',
-        color: 'white'
+        idAlbum: '288437072',
+        red: 150,
+        green: 140,
+        blue: 107
     },
     {
         idAlbum: '420621057',
-        color: 'white'
+        red: 192,
+        green: 38,
+        blue: 43
     },
     {
         idAlbum: '75621062',
-        color: 'white'
+        red: 211,
+        green: 89,
+        blue: 154
     }
 ]
 
