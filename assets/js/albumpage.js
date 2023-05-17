@@ -143,34 +143,49 @@ async function popolaTracce(id){
 
     const tracklist = (await album(id)).tracks.data;
 
-    console.log(tracklist)
+    console.log(tracklist);
+
+    let c = 0;
 
     tracklist.forEach(track => {
+
+        c++;
 
         const brani = document.getElementById('brani');
 
         const row = document.createElement('div');
 
-        row.classList.add('row', 'mb-4');
+        row.classList.add('row', 'mb-4','brano');
 
         row.innerHTML = `<div class="col-6 d-flex align-items-center">
         <div class="me-4">
-            <p>1</p>
+            <p>${c}</p>
         </div>
         <div>
-            <h6>Montanelli - Intro</h6>
-            <p>Pinguini tattici nucleari</p>
+            <h6>${track.title}</h6>
+            <p>${track.artist.name}</p>
         </div>
     </div>
     <div class="col-3 d-flex align-items-center justify-content-end">
         <p>694.578</p>
     </div>
-    <div class="col-3 d-flex align-items-center justify-content-end">
-        <p>1:28</p>
+    <div class="col-3 d-flex align-items-center justify-content-end pe-4">
+        <p>${timeConverter(track.duration)}</p>
     </div>`
 
-        brani.appendChild(row)
+        brani.appendChild(row);
     });
+
+}
+
+// minuti e secondi
+function timeConverter(sec){
+
+    const minuti = Math.floor(sec/60);
+
+    const secondi = sec % 60;
+
+    return minuti + ':' + secondi;
 
 }
 
