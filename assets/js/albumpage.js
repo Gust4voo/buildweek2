@@ -165,7 +165,7 @@ async function popolaTracce(id){
     <div class="col-3 d-flex align-items-center justify-content-end">
         <p>694.578</p>
     </div>
-    <div class="col-3 d-flex align-items-center justify-content-end pe-4">
+    <div class="col-3 d-flex align-items-center justify-content-end">
         <p>1:28</p>
     </div>`
 
