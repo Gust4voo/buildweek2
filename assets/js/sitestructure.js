@@ -143,7 +143,7 @@ function populatePlaylistColumn(){
 // load album anteprima
 async function loadSuggestedAlbum(obj){
 
-    const songContainer = document.getElementById('songsContainer');
+    const jumbotron = document.getElementById('jumbotron');
 
     const result = await album(obj);
 
@@ -151,10 +151,9 @@ async function loadSuggestedAlbum(obj){
 
     const div = document.createElement('div');
 
-    div.classList.add('bg-dark', 'my-2', 'rounded', 'jumbotronContainer');
+    div.classList.add('mx-2', 'my-1', 'py-3', 'px-3', 'd-flex');
 
-    div.innerHTML = `<div class="mx-2 my-1 py-3 px-3 d-flex">
-    <div id="imgJumbotron" class="me-4">
+    div.innerHTML = `<div id="imgJumbotron" class="me-4">
         <img src="${result.cover_medium}" alt="Album cover">
     </div>
     <div class="container-fluid">
@@ -185,14 +184,55 @@ async function loadSuggestedAlbum(obj){
             <button class="btn btn-dark rounded-pill px-4 ms-2">Salva</button>
             <a href="javascript:void(0)"><i class="bi bi-three-dots text-secondary ms-3"></i></a>
 
-        </div></div>
+        </div>
     </div>`;
 
-    songContainer.appendChild(div);
+    jumbotron.appendChild(div);
     
 }
 
 // ---------- BUONASERA ----------
+
+// array album buonasera
+const albumsId = [119420782, 87420682, 309377597, 262561252, 315720947]
+
+// popola buonasera
+function populateBuonasera(){
+
+    for(i = 0; i < 6; i++){
+        loadBuonasera(albumsId[Math.floor(Math.random()*(albumsId.length))]);
+    }
+    
+    
+}
+
+// carica album buonasera
+async function loadBuonasera(obj){
+
+    const buonaseraAlbums = document.getElementById('buonaseraAlbums');
+
+    const resultAlbum = await album(obj);
+
+    console.log(resultAlbum)
+
+    const div = document.createElement('div');
+
+    div.classList.add('col', 'mb-3');
+
+    div.innerHTML = `<div class="d-flex bg-dark rounded align-items-center">
+    <div class="me-3">
+        <img src="${resultAlbum.cover_big}" width="100px" alt="">
+    </div>
+    <div>
+        <h5 class="m-1">${resultAlbum.title}</h5>
+    </div>
+</div>`
+
+    buonaseraAlbums.appendChild(div);
+
+}
+
+// ---------- SUGGERITI ----------
 
 // array suggeriti
 const suggeriti = [
@@ -293,8 +333,6 @@ const search = async (param) => {
 
             const elementsArray = (await response.json()).data;
 
-            console.log(elementsArray);
-
             return elementsArray
 
         }
@@ -316,8 +354,6 @@ const album = async (param) => {
 
             const elementsArray = await response.json();
 
-            console.log(elementsArray);
-
             return elementsArray
 
         }
@@ -335,5 +371,7 @@ window.onload = () => {
     populatePlaylistColumn();
 
     loadSuggestedAlbum(75621062);
+
+    populateBuonasera();
 
 }
