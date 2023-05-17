@@ -151,7 +151,7 @@ async function loadSuggestedAlbum(obj){
 
     const div = document.createElement('div');
 
-    div.classList.add('mx-2', 'my-1', 'py-3', 'px-3', 'd-flex');
+    div.classList.add('mx-2', 'my-1', 'py-3', 'px-2', 'd-flex');
 
     div.innerHTML = `<div id="imgJumbotron" class="me-4">
         <img src="${result.cover_medium}" alt="Album cover">
@@ -315,6 +315,31 @@ const suggeriti = [
     },
 ]
 
+// popola suggeriti
+function populateSuggestion(){
+
+    suggeriti.forEach(e => {
+
+        const suggestionBox = document.getElementById('suggestionBox');
+
+        const div = document.createElement('div');
+
+        div.classList.add('col', 'mb-4');
+
+        div.innerHTML = `<div class="card p-0 bg-dark h-100 mb-4">
+        <img src="${e.suggImg}" class="card-img-top" alt="...">
+        <div class="card-body text-white">
+        <h5 class="card-title">${e.suggName}</h5>
+        <p class="card-text">${e.description}</p>
+        </div>
+    </div>`
+
+        suggestionBox.appendChild(div);
+
+    })
+
+}
+
 // ---------- FETCHES ----------
 
 // search fetch
@@ -370,5 +395,7 @@ window.onload = () => {
     loadSuggestedAlbum(75621062);
 
     populateBuonasera();
+
+    populateSuggestion();
 
 }

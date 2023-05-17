@@ -85,13 +85,14 @@
 
                 <!-- PLAYLIST COLUMN -->
                 <div id="playlistColumn" class="d-flex flex-column mt-4 m-2 overflow-y-scroll text-truncate"></div>
+
             </div>
 
             <!-- SONGS CONTAINER -->
-            <div id="songsContainer" class="col-8">
+            <div id="songsContainer" class="col-8 p-0">
 
                 <!-- ARROW BAR -->
-                <div class="d-flex justify-content-between align-items-center my-3">
+                <div class="d-flex justify-content-between align-items-center my-3 px-3">
 
                     <!-- FRECCE -->
                     <div class="d-flex">
@@ -135,24 +136,37 @@
 
                 </div>
 
-                <!-- Jumbotron Container -->
-                <div id="jumbotron" class="bg-dark mt-5 mb-4 rounded jumbotronContainer"></div>
+                <div id="homeContainer" class="overflow-y-scroll" style="height: 87.2vh;">
+                    <div class="px-3">
+                        <!-- Jumbotron Container -->
+                        <div id="jumbotron" class="bg-dark mt-5 mb-4 rounded jumbotronContainer"></div>
 
-                <!-- BUONASERA -->
-                <div id="buonasera" class="mx-2">
-                    <div class="mb-3">
-                        <h2>BUONASERA</h2>
+                        <!-- BUONASERA -->
+                        <div id="buonasera" class="mx-2 mb-4">
+                            <div class="mb-3">
+                                <h2>BUONASERA</h2>
+                            </div>
+                            <div id="buonaseraAlbums" class="row row-cols-3">                                               
+                            </div>
+                        </div>
+
+                        <!-- SUGGERIMENTI UTENTE -->
+                        <div id="userSuggestion" class="mx-2 mb-4">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h4>Altro di ciò che ti piace</h4>
+                                </div>
+                                <div>
+                                    <a href="javascript:void(0)" style="color: grey"><p>Visualizza tutto</p></a>
+                                </div>
+                            </div>
+                            <div id="suggestionBox" class="row row-cols-4"></div>
+
+                        </div>
                     </div>
-                    <div id="buonaseraAlbums" class="row row-cols-3">                                               
-                    </div>
+                    
                 </div>
-
-                <!-- SUGGERIMENTI UTENTE -->
-                <div id="userSuggestion" class="row row-cols-4">
-
-
-
-                </div>
+                
 
             </div>
 
