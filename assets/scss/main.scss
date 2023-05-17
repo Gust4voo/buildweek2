@@ -1,6 +1,14 @@
-@import 'palette', 'navbar', 'friendBox', 'songContainer';
+@import 'palette', 'navbar', 'friendBox', 'songContainer','albumPage';
+
+@font-face {
+    font-family: 'Circular';
+    src: url('../fonts/CircularStd-Medium.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 html, body{
+    font-family: 'Circular';
     margin: 0;
     padding: 0;
     box-sizing: border-box;

@@ -75,7 +75,48 @@ i {
   object-fit: cover;
 }
 
+#listAlbum {
+  background-color: transparent;
+}
+
+#toolsBar button {
+  border: none;
+  background-color: transparent;
+}
+#toolsBar #play {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #00D052;
+}
+#toolsBar #play:hover {
+  background-color: #04ff67;
+}
+#toolsBar #play:active {
+  background-color: #009d3e;
+}
+
+#brani p {
+  margin: 0;
+  color: grey;
+}
+
+.brano:hover {
+  background-color: rgb(87, 87, 87);
+}
+
+#albumContainer {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/CircularStd-Medium.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 html, body {
+  font-family: "Circular";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
