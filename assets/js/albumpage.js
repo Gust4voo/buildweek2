@@ -167,7 +167,7 @@ async function popolaTracce(id){
         </div>
     </div>
     <div class="col-3 d-flex align-items-center justify-content-end">
-        <p>694.578</p>
+        <p>${track.rank.toLocaleString()}</p>
     </div>
     <div class="col-3 d-flex align-items-center justify-content-end pe-4">
         <p>${timeConverter(track.duration)}</p>
