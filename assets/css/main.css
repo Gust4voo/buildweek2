@@ -114,8 +114,6 @@ i {
 }
 #toolsBar #play:hover {
   background-color: #04ff67;
-  font-size: 1.1em;
-  transition: 1s ease-out;
 }
 #toolsBar #play:active {
   background-color: #009d3e;

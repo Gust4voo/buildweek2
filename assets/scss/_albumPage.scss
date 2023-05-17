@@ -26,9 +26,7 @@
         height: 60px;
         background-color: #00D052;
         &:hover{
-            background-color: lighten($color: #00D052, $amount: 10);
-            font-size: 1.1em;
-            transition: 1s ease-out;
+            background-color: lighten($color: #00D052, $amount: 10);            
         }
         &:active{
             background-color: darken($color: #00D052, $amount: 10);
