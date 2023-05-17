@@ -172,7 +172,7 @@ async function loadSuggestedAlbum(obj){
         
         <div>
         
-            <h2>${result.title}</h2>
+            <a href="./albumpage.html?id=${obj}"><h2>${result.title}</h2></a>
 
             <p>${result.artist.name}</p>
 

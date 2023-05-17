@@ -1,3 +1,41 @@
+// ---------- COLORE PAGINA ----------
+// array album buonasera
+const albumsId = [
+    {
+        idAlbum: '119420782',
+        red: 179,
+        green: 179,
+        blue: 179
+    },
+    {
+        idAlbum: '87420682',
+        color: 'white'
+    },
+    {
+        idAlbum: '309377597',
+        color: 'white'
+    },
+    {
+        idAlbum: '262561252',
+        red: 51,
+        green: 118,
+        blue: 206
+    },
+    {
+        idAlbum: '315720947',
+        color: 'white'
+    },
+    {
+        idAlbum: '420621057',
+        color: 'white'
+    },
+    {
+        idAlbum: '75621062',
+        color: 'white'
+    }
+]
+
+
 // ---------- LOAD FRIENDS ----------
 
 // friends array
@@ -147,8 +185,17 @@ async function popolaTracce(id){
 
     let durataAlbum = 0;
 
-    for(i = 0; i < tracklist.length;i++){
+    // calcolo durata album
+    for(i = 0; i < tracklist.length; i++){
         durataAlbum += tracklist[i].duration;
+    }
+
+    // corrispondenza colore con array locale
+    for(i = 0; i < albumsId.length; i++){
+        if(albumsId[i].idAlbum === id){
+            const albumContainer = document.getElementById('albumContainer');
+            albumContainer.style.background = `linear-gradient(rgb(${albumsId[i].red}, ${albumsId[i].green}, ${albumsId[i].blue}), black 50%)`;
+        }
     }
 
     const albumBox = document.getElementById('albumBox');
@@ -223,34 +270,6 @@ function timeConverter(sec){
     
 }
 
-// ---------- COLORE PAGINA ----------
-// array album buonasera
-const albumsId = [
-    {
-        id: 119420782,
-        color: 'white'
-    },
-    {
-        id: 87420682,
-        color: 'white'
-    },
-    {
-        id: 309377597,
-        color: 'white'
-    },
-    {
-        id: 262561252,
-        color: 'white'
-    },
-    {
-        id: 315720947,
-        color: 'white'
-    },
-    {
-        id: 420621057,
-        color: 'white'
-    }
-]
 
 // ---------- FETCHES ----------
 
