@@ -180,7 +180,7 @@ async function loadSuggestedAlbum(obj){
         </div>
         <div>
 
-            <button class="btn btn-success rounded-pill px-4">Play</button>
+            <button class="btn playBtn rounded-pill px-4">Play</button>
             <button class="btn btn-dark rounded-pill px-4 ms-2">Salva</button>
             <a href="javascript:void(0)"><i class="bi bi-three-dots text-secondary ms-3"></i></a>
 
@@ -194,7 +194,7 @@ async function loadSuggestedAlbum(obj){
 // ---------- BUONASERA ----------
 
 // array album buonasera
-const albumsId = [119420782, 87420682, 309377597, 262561252, 315720947, 420621057]
+const albumsId = [119420782, 87420682, 309377597, 262561252, 288437072, 420621057];
 
 // popola buonasera
 function populateBuonasera(){
@@ -216,12 +216,12 @@ async function loadBuonasera(obj){
 
     div.classList.add('col', 'mb-3');
 
-    div.innerHTML = `<div class="d-flex bg-dark rounded align-items-center">
+    div.innerHTML = `<div class="d-flex rounded align-items-center buonaseraAlbum">
     <div class="me-3">
         <img src="${resultAlbum.cover_big}" width="100px" alt="">
     </div>
     <div>
-        <h5 class="m-1">${resultAlbum.title}</h5>
+    <a href="./albumpage.html?id=${obj}"><h5 class="m-1">${resultAlbum.title}</h5></a>
     </div>
 </div>`
 
@@ -326,7 +326,7 @@ function populateSuggestion(){
 
         div.classList.add('col', 'mb-4');
 
-        div.innerHTML = `<div class="card p-0 bg-dark h-100 mb-4">
+        div.innerHTML = `<div class="card p-0 h-100 mb-4 suggestionElement">
         <img src="${e.suggImg}" class="card-img-top" alt="...">
         <div class="card-body text-white">
         <h5 class="card-title">${e.suggName}</h5>

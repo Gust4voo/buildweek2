@@ -185,7 +185,7 @@ async function popolaTracce(id){
 
         const row = document.createElement('div');
 
-        row.classList.add('row', 'mb-4','brano');
+        row.classList.add('row', 'mb-3','brano', 'py-2');
 
         row.innerHTML = `<div class="col-6 d-flex align-items-center">
         <div class="me-4">
@@ -222,6 +222,35 @@ function timeConverter(sec){
     }
     
 }
+
+// ---------- COLORE PAGINA ----------
+// array album buonasera
+const albumsId = [
+    {
+        id: 119420782,
+        color: 'white'
+    },
+    {
+        id: 87420682,
+        color: 'white'
+    },
+    {
+        id: 309377597,
+        color: 'white'
+    },
+    {
+        id: 262561252,
+        color: 'white'
+    },
+    {
+        id: 315720947,
+        color: 'white'
+    },
+    {
+        id: 420621057,
+        color: 'white'
+    }
+]
 
 // ---------- FETCHES ----------
 
@@ -295,6 +324,9 @@ window.onload = () => {
 
     populatePlaylistColumn();
 
-    popolaTracce(75621062);
+    const param = new URLSearchParams(location.search)
+    const id = param.get("id");
+
+    popolaTracce(id);
 
 }

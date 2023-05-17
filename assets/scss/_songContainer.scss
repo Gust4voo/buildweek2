@@ -25,8 +25,7 @@
 }
 
 .jumbotronContainer {
-    background: rgb(16,16,16);
-    background: linear-gradient(18deg, rgb(0, 0, 0) 39%, rgb(19, 19, 19) 57%); ; 
+    background: linear-gradient(18deg, rgb(0, 0, 0) 39%, rgb(19, 19, 19) 57%);
 }
 
 #imgJumbotron img {
@@ -38,5 +37,19 @@
     .recents_imgs img {
         width: 100%;
         object-fit: cover;
+    }
+}
+
+.buonaseraAlbum, .suggestionElement{
+    background-color: rgb(40, 40, 40);
+    &:hover{
+        background-color: lighten($color: rgb(40, 40, 40), $amount: 10);
+    }
+}
+
+.playBtn{
+    background-color: #18D860;
+    &:hover{
+        background-color: lighten($color: #18D860, $amount: 10);
     }
 }
