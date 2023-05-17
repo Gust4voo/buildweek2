@@ -198,11 +198,8 @@ const albumsId = [119420782, 87420682, 309377597, 262561252, 315720947]
 
 // popola buonasera
 function populateBuonasera(){
-
-    for(i = 0; i < 6; i++){
-        loadBuonasera(albumsId[Math.floor(Math.random()*(albumsId.length))]);
-    }
     
+    albumsId.forEach(e => loadBuonasera(e));
     
 }
 
