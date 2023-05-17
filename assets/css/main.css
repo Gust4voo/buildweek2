@@ -75,6 +75,29 @@ i {
   object-fit: cover;
 }
 
+#listAlbum {
+  background-color: transparent;
+}
+
+#toolsBar button {
+  border: none;
+  background-color: transparent;
+}
+#toolsBar #play {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #00D052;
+}
+
+#itemsAlbums {
+  font-size: 0.8em;
+}
+
+li div p {
+  color: grey;
+}
+
 html, body {
   margin: 0;
   padding: 0;

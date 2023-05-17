@@ -89,43 +89,67 @@
 
             <!-- SONGS CONTAINER -->
             <div id="songsContainer" class="col-7">
+
                 <div id="listAlbum">
 
-                    <div id="toolsBar"></div>
-
-                    <div class="row">
-                        <div class="col-6">
-                            <p># TITOLO</p>
-                        </div>
-
-                        <div class="col-3">
-                            RIPRODUZIONI
-                        </div>
-
-                        <div class="col-3">
-                            ICONA OROLOGIO
-                        </div>
+                    <div id="toolsBar" class="m-3">
+                        <button id="play">
+                            <!--Utilizzo svg perché ho cambiato il colore del triangolo da bianco a dark -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="dark" class="bi bi-play-fill" viewBox="0 0 16 16">
+                            <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                            </svg>
+                        </button>
+                        <button>
+                            <i class="bi bi-suit-heart"></i>
+                        </button>
+                        <button>
+                            <i class="bi bi-cloud-arrow-down"></i>
+                        </button>
+                        <button>
+                            <i class="bi bi-three-dots"></i>
+                        </button>
+                        
+                        
                     </div>
 
-                    <hr>
+                    <div id="itemsAlbums">
+                        <div id="rowTitle" class="text-secondary m-2">
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="m-0"># TITOLO</p>
+                                </div>
 
-                    <ol>
-                        <li class="d-flex">
-                            <div class="col-6 d-flex flex-column">
-                                <h3>Montaqualcosa</h3>
-                                <p>Pinguini Tattici Nucleari</p>
+                                <div class="col-3">
+                                    RIPRODUZIONI
+                                </div>
+
+                                <div class="col-3">
+                                    <i class="bi bi-clock"></i>
+                                </div>
                             </div>
+                        </div>
 
-                            <div class="col-3">
-                                694.578
-                            </div>
+                        <hr class="m-2">
 
-                            <div class="col-3">
-                                1:28
-                            </div>
-                        </li>
-                    </ol>
+                        <ol>
+                            <a href="#">
+                                <li class="d-flex">
+                                    <div class="col-6 d-flex flex-column">
+                                        <h5 class="m-0">Montanelli</strong></h5>
+                                        <p class="m-0">Pinguini  Tattici Nucleari</p>
+                                    </div>
 
+                                    <div class="col-3 d-flex align-items-center">
+                                        <p class="m-0">694.578</p> 
+                                    </div>
+
+                                    <div class="col-3 d-flex align-items-center">
+                                        <p class="m-0">1:28</p> 
+                                    </div>
+                                </li>
+                            </a>
+                        </ol>
+                    </div>
                     
                 </div> 
             </div>
