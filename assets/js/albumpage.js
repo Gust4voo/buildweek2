@@ -204,7 +204,7 @@ async function popolaTracce(id){
     for(i = 0; i < albumsId.length; i++){
         if(albumsId[i].idAlbum === id){
             const albumContainer = document.getElementById('albumContainer');
-            albumContainer.style.background = `linear-gradient(rgb(${albumsId[i].red}, ${albumsId[i].green}, ${albumsId[i].blue}), black 50%)`;
+            albumContainer.style.background = `linear-gradient(rgb(${albumsId[i].red}, ${albumsId[i].green}, ${albumsId[i].blue}), black 60%)`;
         }
     }
 

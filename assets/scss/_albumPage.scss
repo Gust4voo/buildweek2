@@ -9,8 +9,8 @@
     }
     #play{
         border-radius: 50%;
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
         background-color: #00D052;
         &:hover{
             background-color: lighten($color: #00D052, $amount: 10);
