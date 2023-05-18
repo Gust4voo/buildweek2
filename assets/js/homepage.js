@@ -1,3 +1,4 @@
+let audio;
 // ---------- LOAD FRIENDS ----------
 
 // friends array
@@ -418,6 +419,32 @@ const album = async (param) => {
 
     }catch(err){console.log(err)}
 
+}
+
+// start mp3
+async function startMusic(){
+
+    audio.play();
+
+    const musicBtn = document.getElementById('musicBtn');
+
+    musicBtn.innerHTML = `<button class="btn text-light" onclick="pauseMusic()"
+            style="background-color: transparent">  
+                <i style="font-size: 38px" class="bi bi-pause-circle"></i>
+            </button>`;
+}
+
+// pause music
+async function pauseMusic(){
+   
+    audio.pause();
+
+    const musicBtn = document.getElementById('musicBtn');
+
+    musicBtn.innerHTML = `<button class="btn text-light" onclick="startMusic()"
+            style="background-color: transparent">  
+                <i style="font-size: 38px" class="bi bi-play-circle"></i>
+            </button>`;
 }
 
 

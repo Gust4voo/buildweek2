@@ -191,11 +191,11 @@
     <footer class="fixed-bottom">
         
         <!-- PLAYER ZONE -->
-        <div id="playerZone" class="d-flex justify-content-between fixed-bottom bg-dark text-light ">
+        <div id="playerZone" class="row fixed-bottom bg-dark text-light ">
             
             <!-- CURRENT PLAY -->
-            <div id="currentPlay">
-                <div id="inPlay" class="d-flex justify-content-between p-2 gap-2">
+            <div id="currentPlay" class="col-3">
+                <div id="inPlay" class="d-flex justify-content-start p-2 gap-2">
                     <div class="mx-1 bg-secondary">
                         <img src="./assets/img/emptySong.png" style="width: 75px" alt="Album Cover"/>
                     </div>
@@ -210,7 +210,7 @@
             </div>
 
             <!-- PLAYER -->
-            <div id="player" class="d-flex flex-column align-items-center justify-content-center">
+            <div id="player" class="col-6 d-flex flex-column align-items-center justify-content-center">
                 <div class=" d-flex align-items-center">
                     <button class="btn text-light"
                     style="background-color: transparent">
@@ -220,10 +220,12 @@
                     style="background-color: transparent"> 
                         <i class="bi bi-skip-start fs-2"></i>
                     </button>
-                    <button class="btn text-light"
-                    style="background-color: transparent">  
-                        <i style="font-size: 38px" class="bi bi-play-circle"></i>
-                    </button>
+                    <div id="musicBtn">
+                        <button class="btn text-light" onclick="startMusic()"
+                        style="background-color: transparent">  
+                            <i style="font-size: 38px" class="bi bi-play-circle"></i>
+                        </button>
+                    </div>  
                     <button class="btn text-light"
                     style="background-color: transparent"> 
                         <i class="bi bi-skip-end fs-2"></i>
@@ -247,7 +249,7 @@
             </div>
 
             <!-- CONTROLS -->
-            <div id="controls" class="d-flex align-items-center justify-content-center justify-content-md-end grid">
+            <div id="controls" class="col-3 d-flex align-items-center justify-content-center justify-content-md-end grid">
                 <button class="btn text-light"
                     style="background-color: transparent">
                     <i class="bi bi-mic"></i>
