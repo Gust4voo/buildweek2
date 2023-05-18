@@ -173,7 +173,7 @@ async function popolaArtista(id){
 
         const row = document.createElement('div');
 
-        row.classList.add('row', 'mb-4', 'albumOver');
+        row.classList.add('row', 'mb-4', 'albumOver', 'p-2');
 
         const thisAlbum = album[i];
         console.log(thisAlbum)
