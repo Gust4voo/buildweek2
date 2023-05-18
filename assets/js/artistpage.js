@@ -314,6 +314,7 @@ async function pauseMusic(){
             style="background-color: transparent">  
                 <i style="font-size: 38px" class="bi bi-play-circle"></i>
             </button>`;
+
 }
 
 // ---------- FETCHES ----------

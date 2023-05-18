@@ -371,6 +371,8 @@ async function populatePlayer(id, trackId){
             currentPlay.appendChild(div);
 
             localStorage.setItem('data', JSON.stringify([id, trackId]));
+
+            audio = new Audio(tracklist[i].preview);
             
         }
     }
