@@ -161,6 +161,24 @@ async function popolaArtista(id){
     const ascoltatori = document.getElementById('ascoltatori');
 
     ascoltatori.innerHTML = (await artist(id)).nb_fan.toLocaleString();
+
+    if(id === '7917'){
+
+        const btnEaster = document.createElement('button');
+
+        btnEaster.type = 'button';
+
+        btnEaster.setAttribute('onclick', 'fronte()');
+
+        btnEaster.classList.add('btn', 'bg-warning');
+
+        btnEaster.innerHTML = 'ELIMINA FRONTE';
+
+        const easterEggDue = document.getElementById('easterEggDue');
+
+        easterEggDue.appendChild(btnEaster);
+
+    }
     
     let c = 0;
 
@@ -331,6 +349,19 @@ const artist = async (param) => {
         }
 
     }catch(err){console.log(err)}
+
+}
+
+//fronte
+function fronte(){
+
+    const infoArtist = document.getElementById('infoArtist');
+
+    infoArtist.innerHTML = '';
+
+    const coverArtist = document.getElementById('coverArtist');
+    
+    coverArtist.style.backgroundImage = 'url(./assets/img/easter_egg_2.jpeg)';
 
 }
 
