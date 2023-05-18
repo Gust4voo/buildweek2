@@ -218,7 +218,7 @@ async function loadBuonasera(obj){
 
     div.innerHTML = `<div class="d-flex rounded align-items-center buonaseraAlbum">
     <div class="me-3">
-        <img src="${resultAlbum.cover_big}" width="100px" alt="">
+        <img src="${resultAlbum.cover_big}" width="100px" class="rounded-start" alt="">
     </div>
     <div>
     <a href="./albumpage.html?id=${obj}"><h5 class="m-1">${resultAlbum.title}</h5></a>
@@ -327,8 +327,8 @@ function populateSuggestion(){
         div.classList.add('col', 'mb-4');
 
         div.innerHTML = `<div class="card p-3 h-100 mb-4 suggestionElement">
-        <img src="${e.suggImg}" class="card-img-top" alt="...">
-        <div class="card-body text-white">
+        <img src="${e.suggImg}" class="rounded card-img-top" alt="...">
+        <div class="px-0 card-body text-white">
         <h5 class="card-title">${e.suggName}</h5>
         <p class="card-text">${e.description}</p>
         </div>
