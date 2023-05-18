@@ -200,12 +200,20 @@ async function popolaTracce(id){
         durataAlbum += tracklist[i].duration;
     }
 
+    let flag = 0;
+
     // corrispondenza colore con array locale
     for(i = 0; i < albumsId.length; i++){
         if(albumsId[i].idAlbum === id){
             const albumContainer = document.getElementById('albumContainer');
             albumContainer.style.background = `linear-gradient(rgb(${albumsId[i].red}, ${albumsId[i].green}, ${albumsId[i].blue}), black 60%)`;
+            flag++;
         }
+    }
+
+    if(flag === 0){
+        const albumContainer = document.getElementById('albumContainer');
+        albumContainer.style.background = `linear-gradient(yellow, black 60%)`;
     }
 
     const albumBox = document.getElementById('albumBox');

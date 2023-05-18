@@ -162,8 +162,12 @@ async function popolaArtista(id){
 
     ascoltatori.innerHTML = (await artist(id)).nb_fan.toLocaleString();
     
+    let c = 0;
+
     // inserimento album popolari
     for(i = 0; i < 5; i++){
+
+        c++
         
         const albums = document.getElementById('albums');
 
@@ -175,9 +179,9 @@ async function popolaArtista(id){
         console.log(thisAlbum)
 
         row.innerHTML = `<div class="col-6 me-3 d-flex align-items-center">
-        <p class="m-0 me-3">1</p>
+        <p class="m-0 me-3">${c}</p>
         <img class="me-3" src="${thisAlbum.album.cover_xl}" width="75px" alt="">
-        <p class="m-0">${thisAlbum.title}</p>
+        <a href="./albumpage.html?id=${thisAlbum.album.id}"><p class="m-0">${thisAlbum.title}</p></a> 
     </div>
     <div class="col d-flex align-items-center justify-content-end">
         <p class="m-0">${thisAlbum.rank.toLocaleString()}</p>

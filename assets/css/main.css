@@ -5,7 +5,7 @@ a {
   width: 100%;
 }
 
-a:hover {
+#asideNavigation a:hover {
   background-color: grey;
 }
 
