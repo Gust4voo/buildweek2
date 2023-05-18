@@ -219,25 +219,26 @@
     <footer class="fixed-bottom">
         
         <!-- PLAYER ZONE -->
-        <div id="playerZone" class="d-flex justify-content-between fixed-bottom bg-dark text-light ">
+        <div id="playerZone" class="row fixed-bottom bg-dark text-light">
             
             <!-- CURRENT PLAY -->
-            <div id="currentPlay" class="d-flex justify-content-between p-2 gap-2">
-                <div class="mx-1 bg-secondary">
-                    <img src="./assets/img/emptySong.png" style="max-width: 75px; max-height: 75px" alt="Album Cover"/>
+            <div id="currentPlay" class="col-3">
+                <div id="inPlay" class="d-flex justify-content-start p-2 gap-2">
+                    <div class="mx-1 bg-secondary">
+                        <img src="./assets/img/emptySong.png" style="width: 75px" alt="Album Cover"/>
+                    </div>
+                    <div class="pt-2">
+                        <h6>Nessuna riproduzione</h6>
+                        <p>Nessun Artista</p>
+                    </div>
+                    <button class="btn text-light" style="background-color: transparent">
+                        <i class="bi bi-heart"></i>
+                    </button>
                 </div>
-                <div class="pt-2">
-                    <h6>Nessuna riproduzione</h6>
-                    <p>Nessun Artista</p>
-                </div>
-                <button class="btn text-light"
-                    style="background-color: transparent">
-                    <i class="bi bi-heart"></i>
-                </button>
             </div>
 
             <!-- PLAYER -->
-            <div id="player" class="d-flex flex-column align-items-center justify-content-center">
+            <div id="player" class="col-6 d-flex flex-column align-items-center justify-content-center">
                 <div class=" d-flex align-items-center">
                     <button class="btn text-light"
                     style="background-color: transparent">
@@ -247,10 +248,12 @@
                     style="background-color: transparent"> 
                         <i class="bi bi-skip-start fs-2"></i>
                     </button>
-                    <button class="btn text-light"
-                    style="background-color: transparent">  
-                        <i style="font-size: 38px" class="bi bi-play-circle"></i>
-                    </button>
+                    <div id="musicBtn">
+                        <button class="btn text-light" onclick="startMusic()"
+                        style="background-color: transparent">
+                            <i style="font-size: 38px" class="bi bi-play-circle"></i>
+                        </button>
+                    </div>
                     <button class="btn text-light"
                     style="background-color: transparent"> 
                         <i class="bi bi-skip-end fs-2"></i>
@@ -264,8 +267,8 @@
                     <div id="currentStart">
                         <p class="m-0">0:58</p>
                     </div>
-                    <div style="width: 30em; height: 30%; background-color: grey;" class="progress mt-2" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar" style="width: 40%; background-color: white;"></div>
+                    <div style="width: 30em; height: 30%";>
+                        <input type="range" min="0" max="100" value="50">
                     </div>
                     <div id="currentEnd">
                         <p class="m-0">3:20</p>
@@ -274,7 +277,7 @@
             </div>
 
             <!-- CONTROLS -->
-            <div id="controls" class="d-flex align-items-center justify-content-center justify-content-md-end grid">
+            <div id="controls" class=" col-3 d-flex align-items-center justify-content-center justify-content-md-end grid">
                 <button class="btn text-light"
                     style="background-color: transparent">
                     <i class="bi bi-mic"></i>
