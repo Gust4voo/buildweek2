@@ -245,7 +245,7 @@ async function popolaTracce(id){
     tracklist.forEach(track => {
 
         c++;
-
+        
         const brani = document.getElementById('brani');
 
         const row = document.createElement('div');
@@ -257,7 +257,7 @@ async function popolaTracce(id){
             <p>${c}</p>
         </div>
         <div>
-            <h6>${track.title}</h6>
+            <h6 onclick="populatePlayer(${id}, ${track.id})" style="cursor: pointer">${track.title}</h6>
             <a href="./artistpage.html?id=${track.artist.id}"><p>${track.artist.name}</p></a>
         </div>
     </div>
@@ -351,6 +351,40 @@ const artist = async (param) => {
         }
 
     }catch(err){console.log(err)}
+
+}
+
+// populate player
+async function populatePlayer(id, trackId){
+
+    const tracklist = (await album(id)).tracks.data;
+    
+    for(i = 0; i < tracklist.length; i++){
+        if(tracklist[i].id === trackId){
+
+            const questoplay = document.getElementById('questoplay');
+
+            questoplay.innerHTML = '';
+
+            const div = document.createElement('div');
+
+            div.classList.add('mx-1', 'bg-secondary');
+
+            div.innerHTML = `<div class="mx-1 bg-secondary">
+            <img src="${tracklist[i].album.cover_big}" style="max-width: 75px; max-height: 75px" alt="Album Cover"/>
+        </div>
+        <div class="pt-2">
+            <h6>Nessuna riproduzione</h6>
+            <p>Nessun Artista</p>
+        </div>
+        <button class="btn text-light" style="background-color: transparent">
+            <i class="bi bi-heart"></i>
+        </button>`
+
+            inPlay.appendChild(div);
+            
+        }
+    }
 
 }
 

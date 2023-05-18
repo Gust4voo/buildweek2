@@ -222,18 +222,19 @@
         <div id="playerZone" class="d-flex justify-content-between fixed-bottom bg-dark text-light ">
             
             <!-- CURRENT PLAY -->
-            <div id="currentPlay" class="d-flex justify-content-between p-2 gap-2">
-                <div class="mx-1 bg-secondary">
-                    <img src="./assets/img/emptySong.png" style="max-width: 75px; max-height: 75px" alt="Album Cover"/>
+            <div id="currentPlay">
+                <div id="inPlay" class="d-flex justify-content-between p-2 gap-2">
+                    <div class="mx-1 bg-secondary">
+                        <img src="./assets/img/emptySong.png" style="width: 75px" alt="Album Cover"/>
+                    </div>
+                    <div class="pt-2">
+                        <h6>Nessuna riproduzione</h6>
+                        <p>Nessun Artista</p>
+                    </div>
+                    <button class="btn text-light" style="background-color: transparent">
+                        <i class="bi bi-heart"></i>
+                    </button>
                 </div>
-                <div class="pt-2">
-                    <h6>Nessuna riproduzione</h6>
-                    <p>Nessun Artista</p>
-                </div>
-                <button class="btn text-light"
-                    style="background-color: transparent">
-                    <i class="bi bi-heart"></i>
-                </button>
             </div>
 
             <!-- PLAYER -->
