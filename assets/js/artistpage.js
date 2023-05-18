@@ -138,6 +138,18 @@ function populatePlaylistColumn(){
 
 }
 
+// ---------- POPOLA ARTISTA ----------
+async function popolaArtista(id){
+
+    const coverArtist = document.getElementById('coverArtist');
+
+    const imgArtist = (await artist(id)).picture_xl;
+    
+    coverArtist.style.backgroundImage = `url(${imgArtist})`
+
+
+}
+
 // ---------- FETCHES ----------
 
 // search fetch
@@ -211,5 +223,7 @@ window.onload = () => {
 
     const param = new URLSearchParams(location.search)
     const id = param.get("id");
+
+    popolaArtista(id);
 
 }

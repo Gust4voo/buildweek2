@@ -225,7 +225,7 @@ async function popolaTracce(id){
             <img class="rounded-circle" src="${imgArtist}" width="25px" alt="">
         </div>
         <div>
-            <p class="m-0">${tracklist[0].artist.name}<i class="bi bi-dot"></i>2017<i class="bi bi-dot"></i>${tracklist.length} brani,<span class="text-secondary"> ${timeConverter(durataAlbum)}</span></p>
+            <p class="m-0"><a href="./artistpage.html?id=${tracklist[0].artist.id}">${tracklist[0].artist.name}</a><i class="bi bi-dot"></i>2017<i class="bi bi-dot"></i>${tracklist.length} brani,<span class="text-secondary"> ${timeConverter(durataAlbum)}</span></p>
         </div>
     </div>
 </div>`;
@@ -250,7 +250,7 @@ async function popolaTracce(id){
         </div>
         <div>
             <h6>${track.title}</h6>
-            <p>${track.artist.name}</p>
+            <a href="./artistpage.html?id=${track.artist.id}"><p>${track.artist.name}</p></a>
         </div>
     </div>
     <div class="col-3 d-flex align-items-center justify-content-end">

@@ -147,7 +147,7 @@ async function loadSuggestedAlbum(obj){
 
     const result = await album(obj);
 
-    // console.log(result)
+    console.log(result)
 
     const div = document.createElement('div');
 
@@ -174,7 +174,7 @@ async function loadSuggestedAlbum(obj){
         
             <a href="./albumpage.html?id=${obj}"><h2>${result.title}</h2></a>
 
-            <p>${result.artist.name}</p>
+            <a href="./artistpage.html?id=${result.artist.id}"><p>${result.artist.name}</p></a>
 
             <p>Rievoca la memoria dei ${result.artist.name}</p> 
         </div>
