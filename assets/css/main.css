@@ -149,6 +149,10 @@ i {
   background-color: #009d3e;
 }
 
+.albumOver:hover {
+  background-color: grey;
+}
+
 @font-face {
   font-family: "Circular";
   src: url("../fonts/CircularStd-Medium.otf") format("truetype");
