@@ -141,13 +141,92 @@ function populatePlaylistColumn(){
 // ---------- POPOLA ARTISTA ----------
 async function popolaArtista(id){
 
+    // inserimento immagine artista come sfondo
     const coverArtist = document.getElementById('coverArtist');
 
     const imgArtist = (await artist(id)).picture_xl;
     
     coverArtist.style.backgroundImage = `url(${imgArtist})`
 
+    // ricerca degli album popolari
+    const nameArtist = (await artist(id)).name;
 
+    const album = (await search(nameArtist));
+
+    // info su cover
+    const covername = document.getElementById('nomeArtista');
+
+    covername.innerHTML = nameArtist.toUpperCase();
+
+    const ascoltatori = document.getElementById('ascoltatori');
+
+    ascoltatori.innerHTML = (await artist(id)).nb_fan.toLocaleString();
+    
+    // inserimento album popolari
+    for(i = 0; i < 5; i++){
+        
+        const albums = document.getElementById('albums');
+
+        const row = document.createElement('div');
+
+        row.classList.add('row', 'mb-4');
+
+        const thisAlbum = album[i];
+        console.log(thisAlbum)
+
+        row.innerHTML = `<div class="col-6 me-3 d-flex align-items-center">
+        <p class="m-0 me-3">1</p>
+        <img class="me-3" src="${thisAlbum.album.cover_xl}" width="75px" alt="">
+        <p class="m-0">${thisAlbum.title}</p>
+    </div>
+    <div class="col d-flex align-items-center justify-content-end">
+        <p class="m-0">${thisAlbum.rank.toLocaleString()}</p>
+    </div>
+    <div class="col d-flex align-items-center justify-content-end">
+        <p class="m-0">${(timeConverter(thisAlbum.duration))}</p>
+    </div>`
+
+        albums.appendChild(row);
+
+    }
+
+    // brani che ti piacciono
+    const likes = document.getElementById('likes');
+
+    const likesArtist = document.createElement('div');
+
+    likesArtist.classList.add('d-flex');
+
+    likesArtist.innerHTML = `<div class="me-3 position-relative">
+    <img src="${imgArtist}" width="100px" class="rounded-circle" alt="">
+    <div class="pt-1 px-1 rounded-circle position-absolute bottom-0 end-0" style="background-color: #00D052;">
+        <i class="bi bi-heart-fill text-white"></i> 
+    </div>
+
+</div>
+<div class="d-flex flex-column align-items-start justify-content-center">
+    <h5>Hai messo mi piace a ${Math.floor(Math.random()*30)} brani</h5>
+    <p class="m-0">Di ${nameArtist}</p>
+</div>`;
+
+    likes.appendChild(likesArtist);
+
+}
+
+// minuti e secondi
+function timeConverter(sec){
+
+    const minuti = Math.floor(sec/60);
+
+    const secondi = sec % 60;
+
+
+    if(sec > 500){
+        return minuti + ' minuti ' + secondi + ' dadegi.';
+    }else{
+        return minuti + ':' + secondi;
+    }
+    
 }
 
 // ---------- FETCHES ----------
