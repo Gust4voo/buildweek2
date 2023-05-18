@@ -132,6 +132,23 @@ i {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+#playerAlbum button {
+  border: none;
+  background-color: transparent;
+}
+#playerAlbum #playAlbum {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: #00D052;
+}
+#playerAlbum #playAlbum:hover {
+  background-color: #04ff67;
+}
+#playerAlbum #playAlbum:active {
+  background-color: #009d3e;
+}
+
 @font-face {
   font-family: "Circular";
   src: url("../fonts/CircularStd-Medium.otf") format("truetype");

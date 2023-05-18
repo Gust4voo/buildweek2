@@ -50,3 +50,22 @@
 #listAlbum{
     background-color: rgba(0, 0, 0, .2);
 }
+
+#playerAlbum{
+    button{
+        border: none;
+        background-color: transparent;
+    }
+    #playAlbum{
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        background-color: #00D052;
+        &:hover{
+            background-color: lighten($color: #00D052, $amount: 10);            
+        }
+        &:active{
+            background-color: darken($color: #00D052, $amount: 10);
+        }
+    }
+}
