@@ -233,6 +233,42 @@ function timeConverter(sec){
     
 }
 
+// populate player
+async function populatePlayer(id, trackId){
+
+    const tracklist = (await album(id)).tracks.data;
+    
+    for(i = 0; i < tracklist.length; i++){
+        if(tracklist[i].id === trackId){
+
+            const currentPlay = document.getElementById('currentPlay');
+
+            currentPlay.innerHTML = '';
+
+            const div = document.createElement('div');
+
+            div.classList.add('d-flex', 'justify-content-between', 'p-2', 'gap-2');
+
+            div.innerHTML = `<div class="mx-1 bg-secondary">
+            <img src="${tracklist[i].album.cover_big}" style="max-width: 75px; max-height: 75px" alt="Album Cover"/>
+        </div>
+        <div class="pt-2">
+            <h6>${tracklist[i].title}</h6>
+            <p>${tracklist[0].artist.name}</p>
+        </div>
+        <button class="btn text-light" style="background-color: transparent">
+            <i class="bi bi-heart"></i>
+        </button>`
+
+            currentPlay.appendChild(div);
+
+            localStorage.setItem('data', JSON.stringify([id, trackId]));
+            
+        }
+    }
+
+}
+
 // ---------- FETCHES ----------
 
 // search fetch
@@ -308,5 +344,11 @@ window.onload = () => {
     const id = param.get("id");
 
     popolaArtista(id);
+
+    const data = JSON.parse(localStorage.getItem('data'));
+    
+    if(localStorage.getItem('data')){
+        populatePlayer(...data);
+    }
 
 }
