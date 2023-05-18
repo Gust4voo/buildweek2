@@ -326,7 +326,7 @@ function populateSuggestion(){
 
         div.classList.add('col', 'mb-4');
 
-        div.innerHTML = `<div class="card p-0 h-100 mb-4 suggestionElement">
+        div.innerHTML = `<div class="card p-3 h-100 mb-4 suggestionElement">
         <img src="${e.suggImg}" class="card-img-top" alt="...">
         <div class="card-body text-white">
         <h5 class="card-title">${e.suggName}</h5>
