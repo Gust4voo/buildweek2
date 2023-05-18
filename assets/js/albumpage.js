@@ -191,7 +191,7 @@ async function popolaTracce(id){
 
     const tracklist = (await album(id)).tracks.data;
 
-    const imgArtist = (await artist(tracklist[0].artist['id'])).picture_big;
+    const imgArtist = (id === '364507') ? './assets/img/easter_egg_1.jpeg' : (await artist(tracklist[0].artist['id'])).picture_big;
 
     let durataAlbum = 0;
 
@@ -223,7 +223,7 @@ async function popolaTracce(id){
     div.classList.add('d-flex', 'align-items-end');
 
     div.innerHTML = `<div class="me-4">
-    <img src="${tracklist[0].album.cover_big}" width="250px" alt="">
+    <img src="${(id === '364507') ? './assets/img/easter_egg_1.jpeg' : tracklist[0].album.cover_big}" width="250px" alt="">
 </div>
 <div id="infoBox">
     <p class="m-0" style="font-size: 0.9em">ALBUM</p>
