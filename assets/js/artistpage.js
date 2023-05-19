@@ -203,10 +203,10 @@ async function popolaArtista(id){
         <a href="./albumpage.html?id=${thisAlbum.album.id}"><p class="m-0">${thisAlbum.title}</p></a> 
     </div>
     <div class="col d-flex align-items-center justify-content-end">
-        <p class="m-0">${thisAlbum.rank.toLocaleString()}</p>
+        <p class="m-0 d-md-block d-none">${thisAlbum.rank.toLocaleString()}</p>
     </div>
     <div class="col d-flex align-items-center justify-content-end">
-        <p class="m-0">${(timeConverter(thisAlbum.duration))}</p>
+        <p class="m-0 d-md-block d-none">${(timeConverter(thisAlbum.duration))}</p>
     </div>`
 
         albums.appendChild(row);
@@ -221,9 +221,10 @@ async function popolaArtista(id){
     likesArtist.classList.add('d-flex');
 
     likesArtist.innerHTML = `<div class="me-3 position-relative">
-    <img src="${imgArtist}" width="100px" class="rounded-circle" alt="">
+    <img src="${imgArtist}" width="100px" class="rounded-circle d-none d-md-block" alt="">
+    <img src="${imgArtist}" width="60px" class="rounded-circle d-block d-md-none" alt="">
     <div class="pt-1 px-1 rounded-circle position-absolute bottom-0 end-0" style="background-color: #00D052;">
-        <i class="bi bi-heart-fill text-white"></i> 
+        <i class="bi bi-heart-fill text-white fs-6 fs-md-1"></i> 
     </div>
 
 </div>

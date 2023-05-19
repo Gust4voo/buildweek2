@@ -221,8 +221,8 @@ async function loadBuonasera(obj){
     <div class="me-3">
         <img src="${resultAlbum.cover_big}" width="100px" class="rounded-start" alt="">
     </div>
-    <div>
-    <a href="./albumpage.html?id=${obj}"><h5 class="m-1">${resultAlbum.title}</h5></a>
+    <div class="text-truncate">
+    <a href="./albumpage.html?id=${obj}"><h5 class="fs-6 m-md-1 m-0">${resultAlbum.title}</h5></a>
     </div>
 </div>`
 
