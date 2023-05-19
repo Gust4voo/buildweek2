@@ -219,13 +219,14 @@ async function popolaTracce(id){
 </div>
 <div id="infoBox">
     <p class="m-0 d-none d-md-block" style="font-size: 0.9em">ALBUM</p>
-    <h1>${tracklist[0].album.title}</h1>
+    <h1 class="d-none d-md-block">${tracklist[0].album.title}</h1>
+    <h2 class="d-md-none">${tracklist[0].album.title}</h2>
     <div class="d-flex">
         <div id="icona" class="me-2"> 
             <img class="rounded-circle" src="${imgArtist}" width="25px" alt="">
         </div>
         <div>
-            <p class="m-0">${tracklist[0].artist.name}<i class="bi bi-dot"></i>2017<i class="bi bi-dot"></i>${tracklist.length} brani,<span class="text-secondary d-none"> ${timeConverter(durataAlbum)}</span></p>
+            <p class="m-0">${tracklist[0].artist.name}<i class="bi bi-dot"></i>2017<i class="bi bi-dot"></i>${tracklist.length} brani<span class="text-secondary d-none d-md-block"> ${timeConverter(durataAlbum)}</span></p>
         </div>
     </div>
 </div>`;
