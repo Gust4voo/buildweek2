@@ -1,0 +1,38 @@
+a{
+    text-decoration: none;
+    color: white;
+    margin-bottom: 2px;
+    width: 100%;
+}
+
+#asideNavigation a:hover{
+    background-color: grey;
+}
+
+i{
+    font-size: 1.2em;
+    padding: 2px;
+}
+
+#playlistColumn{
+    font-size: 0.9em;
+    height: 72.9vh;
+    
+        a{
+            color: rgb(168, 168, 168);
+            &:active{
+                background-color: rgb(26, 26, 26);
+            }
+        }
+}
+
+#dropdownMenu{
+    background-color: black;
+    a{
+        &:hover{
+            background-color: grey;
+        }
+        color: white; 
+    }
+    
+}

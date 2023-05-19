@@ -1,0 +1,55 @@
+#songsContainer {
+    background: rgb(18,18,18);
+    background: linear-gradient(0deg, rgb(2, 2, 2) 22%, rgba(33,33,33,1) 100%); 
+
+    ul li a:hover {
+        background-color: grey;
+    }
+
+    ul li a{
+        color: white;
+    }
+}
+
+.chevron {
+
+    i:hover {
+        display: none;
+    }
+}
+
+.btn_profile {
+    background-color: black;
+    color: white;
+}
+
+.jumbotronContainer {
+    background: linear-gradient(18deg, rgb(0, 0, 0) 39%, rgb(19, 19, 19) 57%);
+}
+
+#imgJumbotron img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#recentsContainer {
+    .recents_imgs img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.buonaseraAlbum, .suggestionElement{
+    background-color: rgb(40, 40, 40);
+    &:hover{
+        background-color: lighten($color: rgb(40, 40, 40), $amount: 10);
+        cursor: pointer;
+    }
+}
+
+.playBtn{
+    background-color: #18D860;
+    &:hover{
+        background-color: lighten($color: #18D860, $amount: 10);
+    }
+}

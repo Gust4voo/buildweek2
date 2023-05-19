@@ -1,0 +1,77 @@
+#albumContainer {
+    background: rgb(18,18,18);
+    background: linear-gradient(0deg, rgb(2, 2, 2) 22%, rgba(33,33,33,1) 100%); 
+
+    ul li a:hover {
+        background-color: grey;
+    }
+
+    ul li a{
+        color: white;
+    }
+}
+
+#listAlbum{
+    background-color: transparent;
+}
+
+#toolsBar{
+    button{
+        border: none;
+        background-color: transparent;
+    }
+    #play{
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        background-color: #00D052;
+        &:hover{
+            background-color: lighten($color: #00D052, $amount: 10);            
+        }
+        &:active{
+            background-color: darken($color: #00D052, $amount: 10);
+        }
+    }
+}
+
+#brani{
+    p{
+        margin: 0;
+        color: grey;
+    }
+}
+
+.brano{
+    &:hover{
+        background-color: rgb(87, 87, 87);
+    }
+}
+
+#listAlbum{
+    background-color: rgba(0, 0, 0, .2);
+}
+
+#playerAlbum{
+    button{
+        border: none;
+        background-color: transparent;
+    }
+    #playAlbum{
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        background-color: #00D052;
+        &:hover{
+            background-color: lighten($color: #00D052, $amount: 10);            
+        }
+        &:active{
+            background-color: darken($color: #00D052, $amount: 10);
+        }
+    }
+}
+
+.albumOver{
+    &:hover{
+        background-color: grey;
+    }
+}
