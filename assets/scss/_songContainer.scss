@@ -43,6 +43,7 @@
     background-color: rgb(40, 40, 40);
     &:hover{
         background-color: lighten($color: rgb(40, 40, 40), $amount: 10);
+        cursor: pointer;
     }
 }
 

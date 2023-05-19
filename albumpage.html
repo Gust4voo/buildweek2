@@ -20,10 +20,10 @@
         <div id="mainContainer" class="row m-0">
 
             <!-- ASIDE NAVIGATION -->
-            <div id="asideNavigation" class="col-2 d-flex flex-column p-0">
+            <div id="asideNavigation" class="col-2 d-md-flex flex-column p-0 d-none">
 
                 <!-- NAV SECTION -->
-                <div id="navSection d-flex flex-column">
+                <div id="navSection">
 
                     <!-- HIDDEN MENU -->
                     <div id="hiddenMenu">
@@ -88,10 +88,10 @@
             </div>
 
             <!-- SONGS CONTAINER -->
-            <div id="albumContainer" class="col-8 px-0">
+            <div id="albumContainer" class="col-md-8 col-xs-12 px-0">
 
                 <!-- ARROW BAR -->
-                <div class="d-flex justify-content-between align-items-center my-3 px-3">
+                <div class="d-md-flex d-none justify-content-between align-items-center my-3 px-3">
 
                     <!-- FRECCE -->
                     <div class="d-flex">
@@ -136,16 +136,22 @@
                 </div>
 
                 <!-- ALBUM INFO -->
-                <div id="albumBox" class="p-4 mb-4"></div>
+                <div id="albumBox" class="p-4 mb-md-4"></div>
 
                 <!-- TRACKS -->
 
                 <div id="listAlbum" class="pt-2 px-2">
 
-                    <div id="toolsBar" class="d-flex align-items-center m-3 mb-4">
-                        <div class="me-4">
-                            <button id="play" style="padding-top: 0.35em; padding-left: 0.5em;">
+                    <div id="toolsBar" class="d-flex flex-md-row flex-row-reverse justify-content-between justify-content-md-start align-items-center m-md-3 mb-md-4">
+                        <div class="me-md-4 me-3 d-flex align-items-center">
+                            <button id="play" class="d-none d-md-block" style="padding-top: 0.35em; padding-left: 0.5em;">
                                 <i class="bi bi-play-fill" style="font-size: 2.3em; color: black;"></i>
+                            </button> 
+                            <div class="me-3 d-md-none fs-5">
+                                <a href=""><i class="bi bi-shuffle"></i></a>
+                            </div>
+                            <button id="play" class="d-md-none" style="padding-top: 0.35em; padding-left: 0.5em; width: 50px; height: 50px;">
+                                <i class="bi bi-play-fill" style="font-size: 1.5em; color: white;"></i>
                             </button> 
                         </div>
                         <div class="d-flex mt-1">
@@ -161,7 +167,8 @@
                             </div>
                             <div>
                                 <button>
-                                    <i class="bi bi-three-dots text-white" style="font-size: 1.6em;"></i>
+                                    <i class="bi bi-three-dots text-white d-none d-md-block" style="font-size: 1.6em;"></i>
+                                    <i class="bi bi-three-dots-vertical d-md-none" style="font-size: 1.6em;"></i>
                                 </button> 
                             </div> 
                         </div>
@@ -170,7 +177,7 @@
 
                     <div id="itemsAlbums">
                         <!-- INFO BRANI -->
-                        <div id="rowTitle" class="text-secondary mx-3">
+                        <div id="rowTitle" class="text-secondary mx-3 d-md-block d-none">
                             <div class="row">
                                 <div class="col-6">
                                     <p class="m-0"># TITOLO</p>
@@ -186,7 +193,7 @@
                             </div>
                         </div>
 
-                        <hr class="m-2">
+                        <hr class="m-md-2 d-md-block d-none">
 
                         <!-- BRANI -->
                         <div class="overflow-y-scroll">
@@ -199,7 +206,7 @@
             </div>
 
             <!-- FRIENDS BOX -->
-            <div id="friendsBox" class="col-2">
+            <div id="friendsBox" class="col-2 d-none d-md-block">
                 <div>
                     <div id="options" class="d-flex align-items-center justify-content-between mx-2 mb-4">
                         <p class="m-0">Attività amici</p>
@@ -216,7 +223,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="fixed-bottom">
+    <footer class="fixed-bottom d-none d-md-block">
         
         <!-- PLAYER ZONE -->
         <div id="playerZone" class="row fixed-bottom bg-dark text-light">
@@ -306,6 +313,48 @@
             </div>
         </div>
     </footer>
+            
+            <!-- MOBILE FOOTER -->
+            <div class="fixed-bottom">
+                <!-- PLAYER MOBILE -->
+                <div class="d-md-none mx-2 rounded d-flex align-items-center" style="height: 7vh; background-color: #333232; opacity: 96%;">
+                        <div class="row mx-1 d-flex justify-content-between">
+                            
+                            <div class="col-7 d-flex align-items-center">
+                                <p class="text-truncate m-0">Micheal Jackson - Billie Jackson</p>
+                            </div>
+
+                            <div class="col-3 d-flex align-items-center me-4">
+                                <a href=""><i class="bi bi-cast fs-2"></i></a>
+                                <a href=""><i class="bi bi-suit-heart fs-2 mx-2"></i></a>
+                                <a href=""><i class="bi bi-play-fill fs-1 ms-1"></i></a>
+                            </div>
+
+                        </div>
+                </div>
+                
+                <!-- COMMANDS FOOTER -->
+                <div class="d-md-none text-center" style="height: 8vh; background-color:black">
+                    <div class="row mt-2">
+                        
+                        <div class="col">
+                            <a href=""><i class="bi bi-house-door-fill fs-2"></i></a>
+                            <p>Home</p>
+                        </div>
+                        
+                        <div class="col">
+                            <a href=""><i class="bi bi-search fs-2"></i></a>
+                            <p>Cerca</p>
+                        </div>
+
+                        <div class="col">
+                            <a href=""><i class="bi bi-collection-play-fill fs-2"></i></a>
+                            <p>Library</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

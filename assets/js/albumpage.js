@@ -221,14 +221,15 @@ async function popolaTracce(id){
 
     const div = document.createElement('div');
 
-    div.classList.add('d-flex', 'align-items-end');
+    div.classList.add('d-flex', 'flex-md-row', 'flex-column', 'align-items-md-end', 'align-items-center');
 
     div.innerHTML = `<div class="me-4">
     <img src="${(id === '364507') ? './assets/img/easter_egg_1.jpeg' : tracklist[0].album.cover_big}" width="250px" alt="">
 </div>
 <div id="infoBox">
-    <p class="m-0" style="font-size: 0.9em">ALBUM</p>
-    <h1>${tracklist[0].album.title}</h1>
+    <p class="m-0 d-none d-md-block" style="font-size: 0.9em">ALBUM</p>
+    <h1 class="d-none d-md-block">${tracklist[0].album.title}</h1>
+    <h2 class="d-md-none">${tracklist[0].album.title}</h2>
     <div class="d-flex">
         <div id="icona" class="me-2"> 
             <img class="rounded-circle" src="${imgArtist}" width="25px" alt="">
@@ -254,8 +255,8 @@ async function popolaTracce(id){
         row.classList.add('row', 'mb-3','brano', 'py-2');
 
         row.innerHTML = `<div class="col-6 d-flex align-items-center">
-        <div class="me-4">
-            <p>${c}</p>
+        <div class="me-md-4">
+            <p class="d-md-block d-none">${c}</p>
         </div>
         <div>
             <h6 onclick="populatePlayer(${id}, ${track.id})" style="cursor: pointer">${track.title}</h6>
@@ -263,10 +264,10 @@ async function popolaTracce(id){
         </div>
     </div>
     <div class="col-3 d-flex align-items-center justify-content-end">
-        <p>${track.rank.toLocaleString()}</p>
+        <p class="d-md-block d-none">${track.rank.toLocaleString()}</p>
     </div>
     <div class="col-3 d-flex align-items-center justify-content-end pe-4">
-        <p>${timeConverter(track.duration)}</p>
+        <p class="d-md-block d-none">${timeConverter(track.duration)}</p>
     </div>`
 
         brani.appendChild(row);

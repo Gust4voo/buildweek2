@@ -78,6 +78,7 @@ i {
 }
 .buonaseraAlbum:hover, .suggestionElement:hover {
   background-color: #424242;
+  cursor: pointer;
 }
 
 .playBtn {
