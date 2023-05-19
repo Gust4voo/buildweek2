@@ -65,14 +65,12 @@ i {
 
 #imgJumbotron img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 #recentsContainer .recents_imgs img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .buonaseraAlbum, .suggestionElement {
@@ -170,13 +168,8 @@ html, body {
   color: white;
 }
 
-.song-slider {
-  width: 100%;
-  position: relative;
-}
-
 .seek-bar {
-  -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   height: 5px;
   border-radius: 10px;
@@ -198,11 +191,10 @@ html, body {
 
 .pt-1 {
   position: relative;
-  padding: ;
 }
 
 #volume-control {
-  -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   height: 5px;
   border-radius: 10px;

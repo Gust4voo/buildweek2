@@ -16,13 +16,8 @@ html, body{
     color: white;
 }
 
-.song-slider {
-  width: 100%;
-  position: relative;
-}
-
 .seek-bar {
-  -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   height: 5px;
   border-radius: 10px;
@@ -47,7 +42,7 @@ html, body{
 }
 
 #volume-control{
-  -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   height: 5px;
   border-radius: 10px;
