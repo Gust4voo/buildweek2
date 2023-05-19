@@ -449,6 +449,16 @@ async function pauseMusic(){
             </button>`;
 }
 
+//funzione ditta
+function ditta(){
+
+    const imgs = document.querySelectorAll('img');
+
+    imgs.forEach(e => {
+        e.src = './assets/img/easter_egg_3.jpeg'
+    })
+
+}
 
 
 window.onload = () => {

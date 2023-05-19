@@ -173,7 +173,7 @@ async function popolaArtista(id){
 
         btnEaster.classList.add('btn', 'bg-warning');
 
-        btnEaster.innerHTML = 'ELIMINA FRONTE';
+        btnEaster.innerHTML = 'CAMBIA FRONTE';
 
         const easterEggDue = document.getElementById('easterEggDue');
 
@@ -392,7 +392,7 @@ function fronte(){
 
     const coverArtist = document.getElementById('coverArtist');
     
-    coverArtist.style.backgroundImage = 'url(./assets/img/easter_egg_2.jpeg)';
+    coverArtist.style.backgroundImage = 'url(./assets/img/easter_egg_2.png)';
 
 }
 
